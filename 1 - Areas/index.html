@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Grid - Area</title>
+</head>
+
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  .main {
+    height: 100vh;
+    background: gray;
+
+    /* Grid */
+    display: grid;
+    grid-template-areas: 
+      "rod1 rod2 rod2"
+      "rod1 rod3 rod3"
+      "rod1 rod4 rod4";
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-rows: 60px 1fr 50px;
+  }
+  .rod1 {
+    grid-area: rod1;
+    background: blue;
+  }
+  .rod2 {
+    grid-area: rod2;
+    background: green;
+  }
+  .rod3 {
+    grid-area: rod3;
+    background: red;
+  }
+  .rod4 {
+    grid-area: rod4;
+    background: yellow;
+  }
+
+
+</style>
+
+<body>
+  <div class="main">
+    <div class="rod1">ROD 1</div>
+    <div class="rod2">ROD 2</div>
+    <div class="rod3">ROD 3</div>
+    <div class="rod4">ROD 4</div>
+  </div>
+</body>
+
+</html>
